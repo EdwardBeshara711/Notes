@@ -69,8 +69,10 @@ got esxi setup and talking to my network
 
     There is a lot more about setting up vm's and using esxi correctly, but once you are into the web console its pretty straight forward
 
-    setup linux mint vm for plex server and created 2 virtual disks one with 80gb for OS and 1.5tb for media, full raid 0 array is about 6tb in total, so there is room for expansion.
-     the plex vm media will take up the most of the space. 
+    setup linux mint vm for plex server and created 2 virtual disks one with 80gb for OS and 1.5tb for media, 
+        full raid 0 array is about 6tb in total, so there is room for expansion.
+    
+    the plex vm media will take up the most of the space. 
 
 
 
