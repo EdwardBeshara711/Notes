@@ -60,7 +60,7 @@ set esxi static ip to 10.0.0.200
 can now access vmware at https://10.0.0.200/
 
 create raid array 0 with asus motherboard
-this didn work so got a raid controller card
+this didn work so got a raid controller card, esxi needs a hardware raid!
     raid controller card = hardware raid
     mobo raid = software raid
 got a intel nic because i was at the store
