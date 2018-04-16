@@ -1,0 +1,79 @@
+Machine Specs:
+
+AMD Ryzen 5 1600 3.2GHz 6 Core AM4 Boxed Processor with Wraith Spire Cooler
+
+ASUS PRIME B350-PLUS AM4 ATX AMD Motherboard
+
+Crucial Ballistix Sport LT 8GB 2 x 4GB DDR4-2400 PC4-19200 CL16 Dual Channel Desktop Memory Kit
+
+Corsair Obsidian 750D Airflow Edition ATX Full-Tower Computer Case - Black
+
+PowerSpec 650 Watt 80 Plus Bronze ATX Semi-Modular Power Supply
+
+Seagate BarraCuda 2TB 7200RPM SATA III 6Gb/s 3.5" Internal Hard Drive
+Seagate BarraCuda 2TB 7200RPM SATA III 6Gb/s 3.5" Internal Hard Drive
+Seagate BarraCuda 2TB 7200RPM SATA III 6Gb/s 3.5" Internal Hard Drive
+
+Added later: 
+
+Vantec 6-Port 6Gb/s PCIe RAID Host Card with HyperDuo Technology
+Intel PRO/1000 GT Desktop Adapter
+
+Machine was set up and it posted fine
+Installed ESXi iso on thumb drive
+Thumb drive booted on new system
+Tried to install esxi on system
+    
+    No Network Adapters found
+    https://www.v-front.de/p/esxi-customizer-ps.html
+        have to make my own custom esxi iso with NIC drivers for my NIC
+        NiC: Realtek® RTL8111H
+            Downloaded vib and zop
+            Downloaded offline bundle in downloads folder 201712001.zip
+        Have to install Vmware powerCli https://www.powershellgallery.com/packages/VMware.PowerCLI/10.0.0.7895300
+        
+        Need to make custom ISO with nic drivers
+        if this does not work need to go buy a supported  
+
+        It worked
+
+
+         Put ESXi650-201712001.zip - offline bundle
+         & net55-r8168-8.045-napi-offline_bundle.zip - nic drivers inside Packages folder
+
+         then ran from downloads folder C:\Users\Edward\Downloads\:
+         .\ESXi-Customizer-PS-v2.5.1.ps1 -pkgdir 'C:\Users\Edward\Downloads\Packages\'
+
+        wrote new custom iso to thumb drive
+
+        Booted ISO and installed esxi on an extra cheap thumb drive
+
+        error with iso i think i used the wrong downloaded zip package from vmware.com
+
+        downloaded ESXi650-201701001.zip and combined with network drivers and this worked using 
+          .\ESXi-Customizer-PS-v2.5.1.ps1 -pkgdir 'C:\Users\Edward\Downloads\Packages\'
+
+        esxi is installed on the cheap kingston drive now
+
+set esxi static ip to 10.0.0.200
+
+can now access vmware at https://10.0.0.200/
+
+create raid array 0 with asus motherboard
+this didn work so got a raid controller card
+    raid controller card = hardware raid
+    mobo raid = software raid
+got a intel nic because i was at the store
+
+got esxi setup and talking to my network
+
+    There is a lot more about setting up vm's and using esxi correctly, but once you are into the web console its pretty straight forward
+
+    setup linux mint vm for plex server and created 2 virtual disks one with 80gb for OS and 1.5tb for media, full raid 0 array is about 6tb in total, so there is room for expansion.
+     the plex vm media will take up the most of the space. 
+
+
+
+
+
+
